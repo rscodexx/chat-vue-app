@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\channelPublic;
 use App\Http\Controllers\Web\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PageController::class, 'welcome'])->name('welcome');
+
+Route::get('broadcast/{msg}', function ($msg){
+    broadcast(new channelPublic($msg));
+});
 
 Route::group(['middleware' => ['auth:sanctum', config('jetstream.auth_session'), 'verified',]], function(){
     Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');

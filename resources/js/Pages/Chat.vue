@@ -69,8 +69,6 @@ import store from "../store";
 
 <script>
 
-    import Vue from 'vue';
-
     export default {
         data() {
             return {
