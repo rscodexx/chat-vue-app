@@ -49,9 +49,9 @@ defineProps({
                         <div class="grid-cols-12">
                             <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm text-center">
                                 <div v-if="messages.length">
-                                    <div class="bg-gray-300 p-5 rounded-md mt-2" v-for="message in messages">{{message}}</div>
+                                    <div class="bg-gray-300 p-5 rounded-md mt-2 text-black" v-for="message in messages">{{message}}</div>
                                 </div>
-                                <div v-else>Não há novas menssagens</div>
+                                <div v-else>Não há novas mensagens</div>
                             </div>
                         </div>
                     </div>

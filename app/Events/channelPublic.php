@@ -38,7 +38,7 @@ class channelPublic implements ShouldBroadcast
      *
      * @return Channel
      */
-    public function broadcastOn()
+    public function broadcastOn(): Channel
     {
         return new Channel('channel-public');
     }
